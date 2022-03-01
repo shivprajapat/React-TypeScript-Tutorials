@@ -1,12 +1,10 @@
-import { DomRef } from "./components/ref/DomRef";
-import { MutableRef } from "./components/ref/MutableRef";
+import Counter from "./components/class/Counter";
 
 function App() {
 
   return (
     <div className="App">
-      <DomRef />
-      <MutableRef />
+      <Counter message='this is class components counter message' />
     </div>
   );
 }
