@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const bc = new BroadcastChannel("dac")
+        // Handle incoming messages
+        bc.addEventListener('message',e=>{
+            console.log(e);
+        }) 
+        bc.postMessage("Hey, Shiv how's it going!");
+            bc.postMessage([10, 20, 1, 5, 8]);
+            bc.postMessage({ name: "shiv", age: 18 });
+                bc.postMessage(new Blob(['simple text'],{
+                    type:"text/plain"
+                }));
+            
+            console.log(bc);
+    </script>
+</body>
+</html>
